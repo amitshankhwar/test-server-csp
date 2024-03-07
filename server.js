@@ -15,7 +15,7 @@ app.use(cors({
     optionsSuccessStatus: 204,
 }));
 
-Use the helmet middleware with CSP configuration
+// Use the helmet middleware with CSP configuration
 app.use(helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'", 'blob:'],
