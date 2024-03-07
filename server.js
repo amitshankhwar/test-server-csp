@@ -16,19 +16,19 @@ app.use(cors({
 }));
 
 // Use the helmet middleware with CSP configuration
-app.use(helmet.contentSecurityPolicy({
-    directives: {
-      defaultSrc: ["'self'", 'blob:'],
-      connectSrc: ['*.visualwebsiteoptimizer.com', 'app.vwo.com'],
-      styleSrc: ["'self'", "'unsafe-inline'", '*.visualwebsiteoptimizer.com', 'app.vwo.com', 'https://www.w3schools.com'],
-      scriptSrc: ["'self'", "'unsafe-inline'", '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
-      scriptSrcElem: ["'self'", "'unsafe-inline'", '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
-      imgSrc: ["'self'", '*.visualwebsiteoptimizer.com', 'chart.googleapis.com', 'app.vwo.com'],
-      workerSrc: ["'self'", 'blob:'],
-      frameSrc: ['app.vwo.com', '*.visualwebsiteoptimizer.com'],
-      // Add more directives as needed
-    }
-  }));
+// app.use(helmet.contentSecurityPolicy({
+//     directives: {
+//       defaultSrc: ["'self'", 'blob:'],
+//       connectSrc: ['*.visualwebsiteoptimizer.com', 'app.vwo.com'],
+//       styleSrc: ["'self'", "'unsafe-inline'", '*.visualwebsiteoptimizer.com', 'app.vwo.com', 'https://www.w3schools.com'],
+//       scriptSrc: ["'self'", "'unsafe-inline'", '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
+//       scriptSrcElem: ["'self'", "'unsafe-inline'", '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
+//       imgSrc: ["'self'", '*.visualwebsiteoptimizer.com', 'chart.googleapis.com', 'app.vwo.com'],
+//       workerSrc: ["'self'", 'blob:'],
+//       frameSrc: ['app.vwo.com', '*.visualwebsiteoptimizer.com'],
+//       // Add more directives as needed
+//     }
+//   }));
   
 
 app.get("/", (req, res) => {
@@ -51,6 +51,16 @@ app.get("/", (req, res) => {
     <title>W3.CSS Template</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self' blob:;
+    connect-src *.visualwebsiteoptimizer.com app.vwo.com;
+    style-src 'self' 'unsafe-inline' *.visualwebsiteoptimizer.com app.vwo.com https://www.w3schools.com;
+    script-src 'self' 'unsafe-inline' *.visualwebsiteoptimizer.com app.vwo.com;
+    script-src-elem 'self' 'unsafe-inline' *.visualwebsiteoptimizer.com app.vwo.com;
+    img-src 'self' *.visualwebsiteoptimizer.com chart.googleapis.com app.vwo.com;
+    worker-src 'self' blob:;
+    frame-src app.vwo.com *.visualwebsiteoptimizer.com;
+    ">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     ${smartCode}
     <script type="text/javascript">
