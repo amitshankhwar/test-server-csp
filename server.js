@@ -18,7 +18,14 @@ app.use(cors({
 // Use the helmet middleware with CSP configuration
 app.use(helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: ["'self'", 'blob:'],
+      'default-src': ['\'self\'', 'blob:'],
+      'connect-src': ['*.visualwebsiteoptimizer.com', 'app.vwo.com'],
+      'style-src': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
+      'script-src': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
+      'script-src-elem': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
+      'img-src': ['\'self\'', '*.visualwebsiteoptimizer.com', 'chart.googleapis.com', 'app.vwo.com'],
+      'worker-src': ['\'self\'', 'blob:'],
+      'frame-src': ['app.vwo.com', '*.visualwebsiteoptimizer.com']
       // Add more directives as needed
     }
   }));
