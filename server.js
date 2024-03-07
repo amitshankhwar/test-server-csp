@@ -19,12 +19,6 @@ app.use(cors({
 app.use(helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'", 'blob:'],
-      connectSrc: ['*.visualwebsiteoptimizer.com', 'app.vwo.com'],
-      styleSrc: ["'self'", "'unsafe-inline'", '*.visualwebsiteoptimizer.com', 'app.vwo.com', 'https://www.w3schools.com'],
-      scriptSrcElem: ["'self'", "'unsafe-inline'", '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
-      imgSrc: ["'self'", '*.visualwebsiteoptimizer.com', 'chart.googleapis.com', 'app.vwo.com'],
-      workerSrc: ["'self'", 'blob:'],
-      frameSrc: ['app.vwo.com', '*.visualwebsiteoptimizer.com'],
       // Add more directives as needed
     }
   }));
