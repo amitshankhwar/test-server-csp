@@ -55,7 +55,7 @@ app.get("/", (req, res) => {
     default-src 'self' blob:;
     connect-src *.visualwebsiteoptimizer.com app.vwo.com;
     style-src 'self' 'unsafe-inline' *.visualwebsiteoptimizer.com app.vwo.com https://www.w3schools.com;
-    script-src-elem 'self' 'unsafe-inline' *.visualwebsiteoptimizer.com app.vwo.com;
+    script-src-elem 'self';
     img-src 'self' *.visualwebsiteoptimizer.com chart.googleapis.com app.vwo.com;
     worker-src 'self' blob:;
     frame-src app.vwo.com *.visualwebsiteoptimizer.com;
