@@ -21,7 +21,6 @@ app.use(helmet.contentSecurityPolicy({
       'default-src': ['\'self\'', 'blob:'],
       'connect-src': ['*.visualwebsiteoptimizer.com', 'app.vwo.com'],
       'style-src': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com', 'https://www.w3schools.com'],
-      'script-src': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
       'script-src-elem': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
       'img-src': ['\'self\'', '*.visualwebsiteoptimizer.com', 'chart.googleapis.com', 'app.vwo.com'],
       'worker-src': ['\'self\'', 'blob:'],
@@ -29,6 +28,7 @@ app.use(helmet.contentSecurityPolicy({
       // Add more directives as needed
     }
   }));
+//'script-src': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
   
 
 app.get("/", (req, res) => {
