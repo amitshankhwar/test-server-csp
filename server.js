@@ -24,11 +24,10 @@ app.use(helmet.contentSecurityPolicy({
       'script-src-elem': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
       'img-src': ['\'self\'', '*.visualwebsiteoptimizer.com', 'chart.googleapis.com', 'app.vwo.com'],
       'worker-src': ['\'self\'', 'blob:'],
-      'frame-src': ['app.vwo.com', '*.visualwebsiteoptimizer.com']
       // Add more directives as needed
     }
   }));
-//'script-src': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
+
   
 
 app.get("/", (req, res) => {
