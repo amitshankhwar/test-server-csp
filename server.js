@@ -18,7 +18,7 @@ app.use(cors({
 // Use the helmet middleware with CSP configuration
 app.use(helmet.contentSecurityPolicy({
     directives: {
-      'default-src': ['\'self\'', 'blob:'],
+      'default-src': ['blob:'],
       'connect-src': ['*.visualwebsiteoptimizer.com', 'app.vwo.com'],
       'script-src': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com'],  
       'style-src': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com', 'https://www.w3schools.com'],
