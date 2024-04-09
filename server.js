@@ -24,7 +24,7 @@ app.use(helmet.contentSecurityPolicy({
       'style-src': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com', 'https://www.w3schools.com'],
       'script-src-elem': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
       'img-src': ['\'self\'', 'chart.googleapis.com', 'app.vwo.com'],
-      'worker-src': ['\'self\'', 'blob:'],
+      'worker-src': [ 'blob:'],
       // Add more directives as needed
     }
   }));
