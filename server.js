@@ -23,7 +23,6 @@ app.use(helmet.contentSecurityPolicy({
       'script-src': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com'],  
       'style-src': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com', 'https://www.w3schools.com'],
       'script-src-elem': ['\'self\'', '\'unsafe-inline\'', '*.visualwebsiteoptimizer.com', 'app.vwo.com'],
-      'frame-src': ['app.vwo.com', '*.visualwebsiteoptimizer.com'],
       'img-src': ['\'self\'', '*.visualwebsiteoptimizer.com', 'chart.googleapis.com', 'app.vwo.com'],
       'worker-src': ['\'self\'', 'blob:'],
       // Add more directives as needed
